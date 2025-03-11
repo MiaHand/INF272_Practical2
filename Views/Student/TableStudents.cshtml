@@ -1,0 +1,27 @@
+﻿@model IEnumerable<INF272_Practical.Models.StudentClass>
+@{
+    ViewBag.Title = "TableStudents";
+}
+
+<h2>List of Students</h2>
+
+<table class="table">
+    <tr>
+        <th>@Html.DisplayNameFor(StudentClass => StudentClass.StudentNumber)</th>
+        <th>@Html.DisplayNameFor(StudentClass => StudentClass.Name)</th>
+        <th>@Html.DisplayNameFor(StudentClass => StudentClass.Surname)</th>
+        <th>@Html.DisplayNameFor(StudentClass => StudentClass.EmailAddress)</th>
+        <th>Link to Personal Page</th>
+    </tr>
+    @foreach (var student in Model) // For each person
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => student.StudentNumber)</td>
+            <td>@Html.DisplayFor(modelItem => student.Name)</td>
+            <td>@Html.DisplayFor(modelItem => student.Surname)</td>
+            <td>@Html.DisplayFor(modelItem => student.EmailAddress)</td>
+            <td><a href="@Url.Content(student.myLink)" class="btn">LINK</a></td>
+        </tr>
+    }
+
+</table>

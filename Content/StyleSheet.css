@@ -1,0 +1,111 @@
+﻿body {
+    background-color: #033F63;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+
+.main {
+    background-color: #65B2BD;
+    padding: 30px 50px;
+    border: 3px solid #28666E;
+    margin: 0px;
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Stylising the navigation bar*/
+#menu {
+    display: flex;
+    flex-wrap: wrap; /* Allows list to move to the next line when resizing */
+    background-color: black;
+    padding: 0px;
+    justify-content: left;
+    list-style-type: none;
+}
+
+    #menu li {
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu a {
+        display: block;
+        color: #F8F4EC;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-right: 2px solid #F8F4EC;
+        background-color: black;
+    }
+
+    #menu li:last-child a {
+        border-right: none;
+    }
+
+    #menu a.active {
+        background-color: #47A7CA;
+    }
+
+    #menu a:hover:not(.active) {
+        background-color: gray;
+    }
+
+/* The three sections for each person */
+.abt {
+    background-color: #F8F4EC;
+    padding: 10px 20px;
+    margin: 20px 10px;
+    border: 3px solid #28666E;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Image css */
+#bg img {
+    order: -1;
+}
+
+#hob img {
+    order: 1;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+
+
+.flipover:hover {
+    transform: scaleX(-1);
+}
+
+/* Semester columns */
+.columns {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+}
+
+    .col h3 {
+        margin-top: 0;
+    }
+
+    .col ul {
+        list-style-type: none;
+    }
+
+    .col li {
+        margin: 5px 0;
+    }
